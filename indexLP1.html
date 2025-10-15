@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Descrição concisa da sua página para os motores de busca.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Página | Nome do Site</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+         
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#form-section">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switcher-container">
+                <label class="theme-switcher" for="theme-toggle" title="Alternar tema">
+                    <input type="checkbox" id="theme-toggle" />
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="container">
+                <h1>Transforme Dados Brutos em Decisões Inteligentes</h1>
+                <p>Unificamos suas fontes de dados, revelamos insights ocultos e entregamos visualizações claras para que você possa focar no que realmente importa: o crescimento do seu negócio.</p>
+                <a href="#form-section" class="cta-button">Solicite uma Análise Gratuita</a>
+            </div>
+        </section>
+
+        <section class="services-section" id="services">
+            <div class="container">
+                <h2>Como Transformamos Seus Dados em Resultados</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.2 0 .5 0 .7-.1.1 0 .2-.1.3-.1L18 18l4-4-5-5-2.8 2.8c-.2.2-.5.3-.8.3-.6 0-1-.4-1-1 0-.3.1-.5.3-.8L16 8l-4-4-5.5 5.5c.3.2.5.5.5.9 0 .6-.4 1-1 1-.3 0-.5-.1-.8-.3L2.1 7.8c0 .1-.1.2-.1.3C2 8.5 2 9 2 9.5c0 3.9 3.1 7 7 7l2 2-1.5 1.5c-1 1-1 2.6 0 3.5 .7.8 2.1.8 2.8 0L15 18l5 5"></path></svg>
+                        </div>
+                        <h3>1. Integração de Dados</h3>
+                        <p>Conectamos todas as suas fontes de informação, como sistemas ERP e CRM, planilhas e bancos de dados, em um único local seguro e centralizado.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 7.8l-7.4 7.4-3.6-3.6-6.2 6.2"></path><path d="M17 7h6v6"></path></svg>
+                        </div>
+                        <h3>2. Análise e Modelagem</h3>
+                        <p>Nossos especialistas limpam, organizam e analisam seus dados brutos, transformando-os em insights valiosos e modelos preditivos.</p>
+                    </div>
+                    <div class="service-card fade-in-element">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7 12h3v5"></path><path d="M12 7h2v10"></path><path d="M17 15h2v2"></path></svg>
+                        </div>
+                        <h3>3. Visualização (BI)</h3>
+                        <p>Apresentamos os resultados em dashboards de Business Intelligence (BI) interativos, claros e fáceis de entender, para uma tomada de decisão rápida e eficaz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section fade-in-element" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>Nossa Missão é o Seu Sucesso</h2>
+                    <p>Nascemos da paixão por dados e da crença de que toda empresa, independentemente do tamanho, pode se beneficiar de decisões inteligentes. Nossa equipe é formada por especialistas com anos de experiência em engenharia de dados, business intelligence e integração de sistemas.</p>
+                    <p>Nosso compromisso não é apenas entregar gráficos, mas sim fornecer uma parceria estratégica, entendendo suas dores e transformando seus desafios em oportunidades de crescimento através da tecnologia.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Reutilizando uma das suas imagens para consistência visual -->
+                    <img src="img/imagem1.png" alt="Ilustração de análise e estratégia">
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section fade-in-element" id="form-section">
+            <div class="container">
+                <div class="form-text-content">
+                    <h2>Peça uma Análise Gratuita</h2>
+                    <p>Preencha o formulário e descubra como a análise de dados pode transformar seu negócio.</p>
+                    
+                    <!-- Início do Carrossel -->
+                    <div class="carousel">
+                        <div class="carousel-slides">
+                            <div class="carousel-slide">
+                                <div class="chart-container">
+                                    <canvas id="analysisChart"></canvas>
+                                    <button class="open-chart-button" data-chart-type="analysis">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                                        <span>Ver Gráfico</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="chart-container">
+                                    <canvas id="integrationChart"></canvas>
+                                    <button class="open-chart-button" data-chart-type="integration">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        <span>Ver Gráfico</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="chart-container">
+                                    <canvas id="biChart"></canvas>
+                                    <button class="open-chart-button" data-chart-type="bi">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18.7 8a2 2 0 0 1 0 2.8l-6 6a2 2 0 0 1-2.8 0l-4-4a2 2 0 0 1 0-2.8l6-6a2 2 0 0 1 2.8 0z"></path></svg>
+                                        <span>Ver Gráfico</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-button prev" aria-label="Slide anterior">&#10094;</button>
+                        <button class="carousel-button next" aria-label="Próximo slide">&#10095;</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <!-- Fim do Carrossel -->
+    
+                    <div class="benefits-container">
+                        <div class="benefit-item">
+                            <p>✔️ <strong>Tomada de decisão baseada em dados:</strong> Transforme incertezas em estratégias vencedoras.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p>✔️ <strong>Otimização de processos e custos:</strong> Integre seus sistemas e elimine gargalos operacionais.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p>✔️ <strong>Visão 360° do seu negócio:</strong> Tenha todos os seus indicadores em dashboards intuitivos e em tempo real.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <form id="contact-form">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+        
+                        <label for="empresa">Empresa:</label>
+                        <input type="text" id="empresa" name="empresa">
+        
+                        <label for="email">E-mail Corporativo:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="telefone1">Telefone Principal:</label>
+                        <input type="tel" id="telefone1" name="telefone1" required maxlength="15">
+        
+                        <label for="setor">Setor de Atuação:</label>
+                        <input type="text" id="setor" name="setor">
+        
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <div id="form-status"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nome da sua Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para exibir os gráficos no celular -->
+    <div id="chart-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-chart-container">
+                <canvas id="modalChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Registra o plugin de datalabels globalmente para todos os gráficos
+        Chart.register(ChartDataLabels);
+
+        const isMobile = window.innerWidth < 768;
+        const form = document.getElementById('contact-form');
+        const statusDiv = document.getElementById('form-status');
+        const submitButton = form.querySelector('button[type="submit"]');
+        const phoneInput = document.getElementById('telefone1');
+
+        // Função para aplicar a máscara de telefone
+        const handlePhoneInput = (event) => {
+            let input = event.target;
+            // Remove todos os caracteres que não são dígitos
+            input.value = input.value.replace(/\D/g, '');
+            let value = input.value;
+
+            // Aplica a máscara dinamicamente
+            if (value.length > 10) {
+                // Celular: (XX) XXXXX-XXXX
+                input.value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+            } else if (value.length > 6) {
+                // Fixo: (XX) XXXX-XXXX
+                input.value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+            } else if (value.length > 2) {
+                input.value = value.replace(/^(\d{2})(\d*)/, '($1) $2');
+            }
+        };
+
+        // Adiciona o evento 'input' ao campo de telefone
+        phoneInput.addEventListener('input', handlePhoneInput);
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede o envio padrão do formulário
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwP50raofUOrLc6sDKrv5nlhKbu6qj9vy3q_irFMrPRKcgcY6Zas7KhujAJKcfOVJY/exec';
+            const formData = new FormData(form);
+
+            submitButton.disabled = true;
+            statusDiv.textContent = 'Enviando...';
+
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    if (response.ok) {
+                        statusDiv.textContent = 'Dados enviados com sucesso!';
+                        statusDiv.style.color = 'green';
+                        form.reset(); // Limpa o formulário
+                    } else {
+                        throw new Error('Erro no envio.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    statusDiv.textContent = 'Ocorreu um erro. Tente novamente.';
+                    statusDiv.style.color = 'red';
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                });
+        });
+
+        // --- Lógica do Carrossel ---
+        const carousel = document.querySelector('.carousel');
+        const slidesContainer = document.querySelector('.carousel-slides');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        const benefitItems = document.querySelectorAll('.benefit-item');
+        let slideInterval;
+
+        let currentSlide = 0;
+        let analysisChartInstance = null;
+        let integrationChartInstance = null;
+        let biChartInstance = null;
+
+        // Criar os pontos de navegação
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                stopSlideShow(); // Para o temporizador atual
+                goToSlide(i);    // Vai para o slide clicado
+                startSlideShow(); // Reinicia o temporizador
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        const goToSlide = (slideIndex) => {
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+            
+            // Atualiza o dot e o benefício ativos
+            dots[currentSlide].classList.remove('active');
+            benefitItems[currentSlide].classList.remove('active');
+
+            dots[slideIndex].classList.add('active');
+            benefitItems[slideIndex].classList.add('active');
+
+            currentSlide = slideIndex;
+
+            // Se o slide for o do gráfico, cria ou atualiza o gráfico
+            if (!isMobile) {
+                if (slideIndex === 0) {
+                    createOrUpdateAnalysisChart();
+                } else if (slideIndex === 1) {
+                    createOrUpdateIntegrationChart();
+                } else if (slideIndex === 2) {
+                    createOrUpdateBiChart();
+                }
+            }
+        };
+
+        const handleNextSlide = () => {
+            let nextSlide = currentSlide + 1;
+            if (nextSlide >= slides.length) {
+                nextSlide = 0; // Volta para o primeiro
+            }
+            goToSlide(nextSlide);
+        };
+
+        const startSlideShow = () => {
+            stopSlideShow(); // Garante que qualquer temporizador antigo seja limpo antes de criar um novo
+            slideInterval = setInterval(handleNextSlide, 5000); // Troca a cada 5 segundos
+        };
+
+        const stopSlideShow = () => {
+            clearInterval(slideInterval);
+        };
+
+        nextButton.addEventListener('click', () => {
+            stopSlideShow();
+            handleNextSlide();
+            startSlideShow();
+        });
+
+        prevButton.addEventListener('click', () => {
+            stopSlideShow();
+            let prevSlide = currentSlide - 1;
+            if (prevSlide < 0) {
+                prevSlide = slides.length - 1; // Vai para o último
+            }
+            goToSlide(prevSlide);
+            startSlideShow();
+        });
+
+        // --- Lógica do Seletor de Tema ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Verifica a preferência salva no localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-theme');
+            themeToggle.checked = true;
+        }
+
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle('light-theme');
+            
+            // Salva a preferência do usuário
+            localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+
+            // Atualiza as cores do gráfico se ele já existir
+            if (analysisChartInstance) {
+                createOrUpdateAnalysisChart();
+            }
+            if (integrationChartInstance) {
+                createOrUpdateIntegrationChart();
+            }
+            if (biChartInstance) {
+                createOrUpdateBiChart();
+            }
+        });
+
+        // --- Funções dos Gráficos (Chart.js) ---        
+        function getChartColors() {
+            const isLightTheme = body.classList.contains('light-theme');
+            return {
+                gridColor: isLightTheme ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)',
+                labelColor: isLightTheme ? '#000' : '#fff', // Cor para legendas (ex: "Vendas (em Milhares)")
+                tickColor: isLightTheme ? '#000' : '#fff', // Cor para os números dos eixos
+                datalabelColor: '#fff', // Cor para a % dentro do gráfico de rosca (sempre branca)
+                fontSize: isMobile ? 10 : 12, // Tamanho da fonte adaptativo
+                barColor: isLightTheme ? 'rgba(0, 86, 179, 0.8)' : 'rgba(74, 144, 226, 0.8)',
+                barHoverColor: isLightTheme ? 'rgba(0, 123, 255, 1)' : 'rgba(99, 164, 255, 1)',
+                lineColor: isLightTheme ? '#218838' : '#28a745',
+                doughnutColors: isLightTheme ? ['#0056b3', '#007bff', '#28a745'] : ['#4a90e2', '#63a4ff', '#28a745']
+            };
+        }
+
+        function createOrUpdateAnalysisChart(canvasId = 'analysisChart') {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            const colors = getChartColors();
+            const data = {
+                labels: ['CRM', 'ERP', 'Planilhas'],
+                datasets: [{
+                    label: 'Fontes de Dados',
+                    data: [55, 25, 20],
+                    backgroundColor: colors.doughnutColors,
+                    hoverOffset: 4
+                }]
+            };
+            const options = {
+                responsive: true, maintainAspectRatio: true,
+                plugins: { 
+                    legend: { 
+                        position: window.innerWidth < 768 ? 'bottom' : 'right', // Posição da legenda adaptativa
+                        align: 'center',   // Alinha a legenda verticalmente ao centro
+                        labels: { color: colors.labelColor, font: { size: colors.fontSize } } 
+                    },
+                    datalabels: {
+                        formatter: (value, ctx) => {
+                            const datapoints = ctx.chart.data.datasets[0].data;
+                            const total = datapoints.reduce((total, datapoint) => total + datapoint, 0);
+                            const percentage = (value / total * 100).toFixed(0);
+                            return `${percentage}%`;
+                        },
+                        color: colors.datalabelColor,
+                        font: {
+                            weight: 'bold',
+                            size: window.innerWidth < 768 ? 14 : 16, // Tamanho da % adaptativo
+                        }
+                    } 
+                }
+            };
+            if (analysisChartInstance) analysisChartInstance.destroy();
+            analysisChartInstance = new Chart(ctx, { type: 'doughnut', data, options });
+        }
+
+        function createOrUpdateIntegrationChart(canvasId = 'integrationChart') {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            const colors = getChartColors();
+            const data = {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{
+                    label: 'Eficiência Operacional (%)',
+                    data: [45, 62, 78, 91],
+                    fill: false,
+                    borderColor: colors.lineColor,
+                    tension: 0.1
+                }]
+            };
+            const options = {
+                responsive: true, maintainAspectRatio: true,
+                plugins: { legend: { labels: { color: colors.labelColor, font: { size: colors.fontSize } } } },
+                scales: {
+                    y: { beginAtZero: false, ticks: { color: colors.tickColor, font: { weight: 'bold', size: colors.fontSize } }, grid: { color: colors.gridColor } },
+                    x: { ticks: { color: colors.tickColor, font: { weight: 'bold', size: colors.fontSize } }, grid: { color: 'transparent' } }
+                }
+            };
+            if (integrationChartInstance) integrationChartInstance.destroy();
+            integrationChartInstance = new Chart(ctx, { type: 'line', data, options });
+        }
+
+        function createOrUpdateBiChart(canvasId = 'biChart') {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            const colors = getChartColors();
+
+            const data = {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                datasets: [{
+                    label: 'Vendas (em Milhares)',
+                    data: [65, 59, 80, 81, 56, 55],
+                    backgroundColor: colors.barColor,
+                    borderColor: colors.barColor,
+                    borderWidth: 1,
+                    hoverBackgroundColor: colors.barHoverColor
+                }]
+            };
+
+            const options = {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        labels: { color: colors.labelColor, font: { size: colors.fontSize } }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { color: colors.tickColor, font: { weight: 'bold', size: colors.fontSize } },
+                        grid: { color: colors.gridColor }
+                    },
+                    x: {
+                        ticks: { color: colors.tickColor, font: { weight: 'bold', size: colors.fontSize } },
+                        grid: { color: 'transparent' }
+                    }
+                }
+            };
+            if (biChartInstance) biChartInstance.destroy();
+            biChartInstance = new Chart(ctx, { type: 'bar', data, options });
+        }
+
+        // --- Lógica do Modal ---
+        const modal = document.getElementById('chart-modal');
+        const modalCloseButton = document.querySelector('.modal-close');
+        const openChartButtons = document.querySelectorAll('.open-chart-button');
+
+        function openModal(chartType) {
+            modal.style.display = 'flex';
+            // Cria o gráfico específico dentro do canvas do modal
+            if (chartType === 'analysis') {
+                createOrUpdateAnalysisChart('modalChart');
+            } else if (chartType === 'integration') {
+                createOrUpdateIntegrationChart('modalChart');
+            } else if (chartType === 'bi') {
+                createOrUpdateBiChart('modalChart');
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            // Destrói o gráfico do modal para liberar memória
+            if (analysisChartInstance) analysisChartInstance.destroy();
+            if (integrationChartInstance) integrationChartInstance.destroy();
+            if (biChartInstance) biChartInstance.destroy();
+        }
+
+        openChartButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const chartType = e.currentTarget.dataset.chartType;
+                openModal(chartType);
+            });
+        });
+
+        modalCloseButton.addEventListener('click', closeModal);
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Inicia no primeiro slide (agora que todas as funções foram definidas)
+        goToSlide(0);
+
+        // Inicia o autoplay e adiciona pausa no hover
+        startSlideShow();
+        carousel.addEventListener('mouseenter', stopSlideShow);
+        carousel.addEventListener('mouseleave', startSlideShow);
+
+        // --- Lógica de Animação de Scroll ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Anima só uma vez
+                }
+            });
+        }, {
+            threshold: 0.1 // Ativa quando 10% do elemento estiver visível
+        });
+
+        const elementsToAnimate = document.querySelectorAll('.fade-in-element');
+        elementsToAnimate.forEach((el) => observer.observe(el));
+
+    </script>
+</body>
+</html>

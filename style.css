@@ -1,0 +1,688 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Estilos Gerais e Reset --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo escuro principal */
+    color: #e0e0e0; /* Cor de texto principal clara */
+}
+
+/* --- Classe de Contêiner para centralizar conteúdo --- */
+.container {
+    width: 90%;
+    max-width: 1100px; /* Aumentamos a largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+/* --- Contêineres Principais (Header, Main, Footer) --- */
+header, footer {
+    width: 100%;
+    background-color: #1e1e1e; /* Fundo escuro para seções */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+    border-bottom: 1px solid #333; /* Borda sutil */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+h1, h2 {
+    color: #4a90e2; /* Azul vibrante para destaque */
+}
+h1, h2, p {
+    text-align: center;
+}
+
+p {
+    color: #a0a0a0; /* Cinza claro para parágrafos */
+}
+
+/* --- Navegação --- */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.main-nav a:hover {
+    color: #63a4ff; /* Azul mais claro no hover */
+}
+
+/* --- Seletor de Tema --- */
+.theme-switcher-container {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switcher {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.theme-switcher input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #444;
+    transition: .4s;
+    border-radius: 26px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "🌙";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    font-size: 14px;
+    text-align: center;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #ccc;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+    content: "☀️";
+}
+
+/* --- Seção Hero (Introdução) --- */
+.hero-section {
+    /* Usa a imagem 2 como fundo com uma sobreposição escura */
+    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), url('img/imagem2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #fff; /* Sobrescreve a cor azul padrão */
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #e0e0e0; /* Sobrescreve a cor cinza padrão */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #63a4ff;
+    transform: translateY(-3px);
+}
+
+/* --- Animação de Scroll --- */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Seção do Formulário --- */
+.form-text-content {
+    flex: 1; /* Ocupa metade do espaço */
+    min-width: 0; /* Permite que o item encolha abaixo do tamanho do seu conteúdo */
+}
+
+/* --- Seção de Serviços --- */
+.services-section {
+    padding: 40px 0;
+}
+
+.services-section h2 {
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    margin-bottom: 20px;
+}
+
+.service-icon svg {
+    color: #4a90e2;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+/* --- Seção Sobre --- */
+.about-section {
+    padding: 60px 0;
+    background-color: #121212; /* Fundo um pouco diferente para quebrar o ritmo */
+}
+
+.about-section .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-content h2, .about-content p {
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* --- Estilos do Carrossel --- */
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.chart-container {
+    position: relative;
+    height: 40vh; /* Altura relativa à altura da tela */
+    max-height: 350px; /* Altura máxima em pixels */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-chart-button {
+    display: none; /* Escondido por padrão em desktop */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #4a90e2;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    gap: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.open-chart-button:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.open-chart-button svg {
+    width: 32px;
+    height: 32px;
+    transition: color 0.3s ease;
+}
+
+/* --- Estilos do Modal --- */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-chart-container {
+    height: 60vh;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.carousel-button.prev { left: 10px; }
+.carousel-button.next { right: 10px; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: #4a90e2; /* Ponto ativo com a cor de destaque */
+}
+
+/* --- Lista de Benefícios --- */
+.benefits-container {
+    height: 100px; /* Altura fixa para evitar o "pulo" da tela */
+    margin-top: 20px;
+    position: relative;
+}
+
+.benefit-item {
+    text-align: center;
+    color: #e0e0e0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute; /* Permite que fiquem no mesmo lugar para o fade */
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.benefit-item.active {
+    opacity: 1;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    background-color: #1e1e1e;
+    padding: 40px 0;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.form-section .container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaço entre os gráficos e o formulário */
+}
+
+.form-container {
+    flex: 1; /* Ocupa a outra metade do espaço */
+    min-width: 0; /* Permite que o item encolha abaixo do tamanho do seu conteúdo */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: -5px; /* Aproxima o rótulo do campo */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+button[type="submit"] {
+    padding: 15px;
+    background-color: #28a745; /* Verde para ação positiva */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+button[type="submit"]:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #218838; /* Verde mais escuro no hover */
+}
+
+/* --- Mensagem de Status do Formulário --- */
+#form-status {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 20px; /* Garante que o layout não pule */
+}
+
+/* --- Rodapé --- */
+footer {
+    width: 100%;
+    font-size: 0.9rem;
+    color: #888;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    /* --- Tipografia e Espaçamento Geral --- */
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h1 {
+        font-size: 2rem; /* Reduz o tamanho do título principal */
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .services-section, .about-section {
+        padding: 40px 0;
+    }
+    .about-section .container, .form-section .container {
+        gap: 30px; /* Reduz o espaçamento entre seções empilhadas */
+    }
+
+    /* --- Navegação --- */
+    header .container { 
+        flex-direction: column; 
+        gap: 15px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap; /* Permite que o menu quebre a linha se necessário */
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .about-section .container {
+        flex-direction: column; /* Empilha com texto em cima */
+        text-align: center;
+    }
+    
+    .form-section .container {
+        flex-direction: column;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h2, .about-content p {
+        text-align: center;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .chart-container {
+        height: 200px; /* Altura fixa para o botão */
+    }
+
+    .chart-container canvas {
+        display: none; /* Esconde o canvas no celular */
+    }
+
+    .open-chart-button {
+        display: flex; /* Mostra o botão no celular */
+        height: 100%;
+    }
+}
+
+/* --- Estilos do Tema Claro --- */
+body.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+body.light-theme header,
+body.light-theme footer,
+body.light-theme .form-section {
+    background-color: #fff;
+}
+
+body.light-theme header {
+    border-bottom-color: #eee;
+}
+
+body.light-theme h1,
+body.light-theme h2 {
+    color: #0056b3;
+}
+
+body.light-theme p {
+    color: #555;
+}
+
+body.light-theme .main-nav a {
+    color: #0056b3;
+}
+
+body.light-theme .main-nav a:hover {
+    color: #007bff;
+}
+
+body.light-theme .carousel-dot.active {
+    background-color: #0056b3;
+}
+
+body.light-theme .benefit-item {
+    color: #333;
+}
+
+body.light-theme .about-section {
+    background-color: #f4f4f9;
+}
+
+body.light-theme .hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('img/imagem2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+body.light-theme .hero-section h1 {
+    color: #0056b3;
+}
+
+body.light-theme .hero-section p {
+    color: #333;
+}
+
+body.light-theme .open-chart-button {
+    color: #0056b3;
+    border-color: #0056b3;
+    background-color: transparent;
+}
+
+body.light-theme .open-chart-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+body.light-theme .modal-content {
+    background-color: #fefefe;
+}
+
+body.light-theme .service-card {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+body.light-theme .service-icon svg {
+    color: #0056b3;
+}
+
+body.light-theme .form-section {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+body.light-theme input[type="text"],
+body.light-theme input[type="email"],
+body.light-theme input[type="tel"] {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}
+
+body.light-theme input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+body.light-theme footer {
+    color: #777;
+}
+
+body.light-theme .slider {
+    background-color: #ccc;
+}
+
+body.light-theme input:checked + .slider {
+    background-color: #444;
+}
